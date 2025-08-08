@@ -16,7 +16,7 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'TanStack Start Starter',
+        title: 'Home: Paw Pouch',
       },
     ],
     links: [
@@ -36,9 +36,21 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body>
+      <body className="min-h-screen">
         <Header />
-        {children}
+        <main>{children}</main>
+        <footer className="text-center p-4">
+          <p>
+            Thanks to the{' '}
+            <a
+              href="https://design.northwestern.edu/"
+              className="text-blue-600 hover:underline"
+            >
+              Segal Design Institute
+            </a>{' '}
+            for their support in this project!
+          </p>
+        </footer>
         <TanStackRouterDevtools />
         <Scripts />
       </body>
